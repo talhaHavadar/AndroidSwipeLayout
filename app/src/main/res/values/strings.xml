@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">AndroidSwipeLayout</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello moto!</string>
     <string name="action_settings">Settings</string>
+    <string name="content1">Manual Swiping</string>
+    <string name="content2">Manual Swiping</string>
+    <string name="oh_my_blue_background">Oh my blue background!!</string>
+    <string name="oh_my_red_background">Oh my red background!!</string>
+    <string name="oh_my_green_background">Oh my green background!!</string>
+    <string name="just_auto">Only auto swipe</string>
+    <string name="custom_runnable_1">Custom Runnable on Swipe 1</string>
+    <string name="custom_runnable_2">Custom Runnable on Swipe 2</string>
+    <string name="message">This is a demo application for AndroidSwipeLayout by talhaHavadar.</string>
 </resources>

@@ -1,11 +1,198 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:text="@string/message"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_below="@id/message"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/hello"
+                android:text="@string/hello_world" />
+
+            <com.scorptech.relativeswipelayout.RelativeSwipeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:id="@+id/swipeLayout1"
+                android:layout_below="@id/hello">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="@string/content1"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="@string/content2"/>
+
+                </RelativeLayout>
+            </com.scorptech.relativeswipelayout.RelativeSwipeLayout>
+            <com.scorptech.relativeswipelayout.RelativeSwipeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/swipeLayout1"
+                android:layout_marginTop="5dp"
+                android:id="@+id/swipeLayout2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#3369E8">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oh_my_blue_background"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#D50F25">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oh_my_red_background"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#009925">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oh_my_green_background"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+
+            </com.scorptech.relativeswipelayout.RelativeSwipeLayout>
+
+            <com.scorptech.relativeswipelayout.RelativeSwipeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/swipeLayout2"
+                android:layout_marginTop="5dp"
+                android:id="@+id/swipeLayout3">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#3a3c3e">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/just_auto"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#eeb211">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/just_auto"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+            </com.scorptech.relativeswipelayout.RelativeSwipeLayout>
+
+            <com.scorptech.relativeswipelayout.RelativeSwipeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/swipeLayout3"
+                android:layout_marginTop="5dp"
+                android:background="#7B0099"
+                android:id="@+id/swipeLayout4">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_runnable_1"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_runnable_2"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:textColor="#ebebeb"/>
+                </RelativeLayout>
+            </com.scorptech.relativeswipelayout.RelativeSwipeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
 
 </RelativeLayout>

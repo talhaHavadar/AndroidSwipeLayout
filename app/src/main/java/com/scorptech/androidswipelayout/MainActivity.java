@@ -1,17 +1,46 @@
 package com.scorptech.androidswipelayout;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.scorptech.relativeswipelayout.RelativeSwipeLayout;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
+
+    RelativeSwipeLayout swipeLayout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Manual swipe layout with two inner view
+        swipeLayout1 = (RelativeSwipeLayout) findViewById(R.id.swipeLayout1);
+        swipeLayout1.init();
+        /////////////////////////////////////////
+        //// Auto swipe /////////////
+        RelativeSwipeLayout swipeLayout2 = (RelativeSwipeLayout) findViewById(R.id.swipeLayout2);
+        swipeLayout2.init(3000);
+        //////////////////////////
+        ////Only Auto swipe ///////
+        RelativeSwipeLayout swipeLayout3 = (RelativeSwipeLayout) findViewById(R.id.swipeLayout3);
+        swipeLayout3.init(5000);
+        swipeLayout3.setEnableManualSwipe(false);
+        /////////////////////////
+        // Custom runnable on swipe /////
+        RelativeSwipeLayout swipeLayout4 = (RelativeSwipeLayout) findViewById(R.id.swipeLayout4);
+        swipeLayout4.init(7000);
+        swipeLayout4.postRunnableOnSwipe(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this,"Custom runable on swipe toast",Toast.LENGTH_SHORT).show();
+            }
+        });
+        ////////////////////////////////
     }
 
     @Override
